@@ -36,6 +36,10 @@ function freshGame(phase: Phase = 'ready'): Game {
   return { snake: STARTING_SNAKE.map((part) => ({ ...part })), food: { x: 14, y: 10 }, score: 0, phase }
 }
 
+function freshGame1(phase: Phase = 'ready'): Game {
+  return { snake: STARTING_SNAKE.map((part) => ({ ...part })), food: { x: 14, y: 10 }, score: 0, phase }
+}
+
 function readBestScore(): number {
   try {
     return Number(window.localStorage.getItem('snake-best-score')) || 0
